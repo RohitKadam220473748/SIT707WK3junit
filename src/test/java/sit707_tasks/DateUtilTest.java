@@ -71,4 +71,10 @@ public class DateUtilTest {
 	/*
 	 * Write tests for rest months of year 2024.
 	 */
+	public void testMaxFebruary29LeapYearShouldIncrementToMarch1() {
+		DateUtil date = new DateUtil(29, 2, 2024);
+        date.increment();
+        Assert.assertEquals(1, date.getDay());
+        Assert.assertEquals(3, date.getMonth());
+	}
 }
